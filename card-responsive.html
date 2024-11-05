@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+@font-face {
+font-family: 'TTHoves';
+src: url('font/TT\ Hoves\.ttf') format('truetype');
+wght: 400;
+}
+    @media (prefers-color-scheme: light) {
+        :root {
+            --accent-color: #66ff00;
+            --background:#FFFFFF;
+            --text:#0A0F1B;
+            --button-normal:#F8FAFA;
+            --button-active:#E8EBEE;
+            --description: #818891;
+            --black: #0A0F1B;
+            --white: #FFFFFF;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --accent-color: #66ff00;
+            --background:#151515;
+            --text:#FFFFFF;
+            --button-normal:#262626;
+            --button-active:#626262;
+            --description: #D7D7D7;
+            --black: #151515;
+            --white: #FFFFFF;
+        }
+    }
+
+    *{
+        transition: color 0.3s ease-out;
+        transition: background-color 0.3s ease-out;
+    }
+    body{
+        font-family: 'TT hoves';
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--background);
+        color: var(--text);
+    }
+    
+    div{
+        outline: 0px solid blueviolet;
+    }
+    p, div{
+        margin: 0;
+        padding: 0;
+    }
+    .card{
+        margin: 0 16px;
+        background-color: var(--button-normal);
+        color: var(--text);
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 8px;
+    }
+    .card.dark-mode {
+        background-color: var(--black-0);
+        color: var(--button-active);
+    }
+    .head-block{ 
+        display: flex;
+        align-content: space-between;
+        padding: 8px;
+        flex: 1;
+        flex-flow: row wrap;
+
+    }
+    .imagae-block{
+        border-radius: 8px;
+        width: 50%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        min-width: 250px;
+    }
+
+    .left-side{
+        flex: 1;
+        text-wrap: nowrap;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        min-width:calc(60vw - 80px);
+
+    }
+    .right-side{
+        text-wrap: nowrap;
+        display: flex;
+    }
+    .weight{
+        width: fit-content;
+        height: fit-content;
+        padding: 8px;
+        background-color: var(--accent-color);
+        border-radius: 16px;
+        font-size: 18px;
+        font-weight: 480;
+    }
+
+    .l-input{
+    color: var(--black-0);
+    z-index: 20; 
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;  
+    }
+
+    .image-area{
+        padding: 48px 16px 16px 16px;
+        background-color: var(--button-active);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        flex: 1;
+    }
+    img{
+        width: 100%;
+        height: 60px;
+        object-fit: contain;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: 450;
+        color: var(--text-light);
+        font-family: "TTHoves";
+        font-variant-numeric: diagonal-fractions;
+    }
+    .des{
+        font-size: 12px;
+        font-weight: 500;
+        font-variant-caps: all-small-caps;
+        font-variant-caps:titling-caps;
+        color: var(--text-light);
+
+    }
+    test-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 24px;
+    }
+
+    .lang-block{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    }
+    input[type="radio"] + label {
+        padding:16px;
+        border-radius: 24px;
+        display: flex;
+
+    }
+    input[type="radio"] {
+        display: none;
+
+
+    }
+    input[name="lang"] + label {
+        color: var(--text);
+        transition: all 0s;
+    }
+
+    /* input[name="lang"]:checked + label{
+        color: var(--white-0);
+    } */
+   input[name="lang"]:checked + label{
+        color: blueviolet;
+    }
+    /* input#green + label + input[name="lang"] + label{
+        color: red;
+    } */
+
+    input[name="color"] + label>.gray{
+        background-color: #7D7D7D;
+    }
+    input[name="color"] + label>.red{
+        background-color: #FD0F00;
+    }
+    input[name="color"] + label>.green{
+        background-color: #66ff00;
+        color
+    }
+    input[name="color"] + label>.blue{
+        background-color: #0153F4;
+    }
+    input[name="color"] + label.small-dots{
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input[name="color"]:checked + label>.small-dots{
+        padding: px;
+        border-radius: 50%;
+    }
+    input[name="color"] + label>.small-dots{
+        border-radius: 50%;
+        padding: 8px;
+        transition: all 0.6s cubic-bezier(0.26, 0.83, 0.3, 1.38);
+    }
+
+    input[name="color"]:checked + label>.small-dots>.atom-dots{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+    }
+    input[name="color"] + label>.small-dots>.atom-dots{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        transition: all 0.6s cubic-bezier(0.26, 0.83, 0.3, 1.38);
+    }
+    .dark-mode-btn{
+        display: flex;
+        padding: 8px 16px;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        background-color: var(--accent-color);
+        color: var(--text);
+    }
+    button{
+        appearance: none;
+        border: none;
+        outline: none;
+    }
+    
+    .small-dots{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 16px;
+        background-color: #000 ;
+    }
+    .dots{
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    .atom-dots{
+        background-color: #ffffff;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px 0 #00000040;
+    }
+
+    .color-block, .radio-block{
+        padding: 8px;
+        background-color: var(--button-normal);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 24px;
+    }
+    .radio-block {
+            position: relative;
+        }
+
+    
+#slider {
+    border-radius: 16px;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    height:calc( 100% - 16px);
+    background-color:var(--accent-color);
+    transition: 0.3s ease-out;
+    display: block; /* Ensure the slider is displayed */
+    width: 0; /* Initial width set to 0 */
+}
+.l-input.green{
+    color: var(--black-0);
+}
+label{
+    color: var(--black-0);
+}
+
+
+
+</style>
+
+<body>
+    <button class="dark-mode-btn" onclick="toggleDarkMode()" id="mode-text">Dark Mode</button>
+
+    <div class="color-scheme">
+        <div class="color-block">
+            <input type="radio" name="color" label-text="var(--text)"  label-text-active="var(--black)" value="#7D7D7D" id="gray">
+            <label class="dots" for="gray">
+                <div class="small-dots gray">
+                    <div class="atom-dots"></div>
+                </div>
+            </label>
+            <input type="radio" name="color" label-text="var(--text)"  label-text-active="var(--white)"  value="#F34A33" id="red"checked>
+            <label class="dots" for="red">
+                <div class="small-dots red">
+                    <div class="atom-dots"></div>
+                </div>
+            </label>
+            <input  type="radio" name="color" label-text="var(--text)"  label-text-active="var(--black)"  value="#66f400" id="green" >
+            <label class="dots" for="green">
+                <div class="small-dots green">
+                    <div class="atom-dots"></div>
+                </div>
+            </label>
+            <input  type="radio" name="color" label-text="var(--text)"  label-text-active="var(--white)"  value="#0153F4" id="blue">
+            <label class="dots" for="blue">
+                <div class="small-dots blue">
+                    <div class="atom-dots"></div>
+                </div>
+            </label>
+        </div>
+
+    </div>
+    <div class="language">
+        <h2 class="lang">Settings</h2>
+        <div class="radio-block">
+                <input type="radio" name="lang" id="en" value="english" checked>
+                <label  class="l-input" for="en">English</label>
+                <input type="radio" name="lang" id="ru" value="russian">
+                <label class="l-input" label-text="var(--text)"  label-text-active="var(--white)" for="ru">Русский</label>
+                <span id="slider"></span>
+        </div>
+    </div>
+    
+
+    <test-card>
+        <div class="card">
+            <div class="head-block">
+                    <div class="left-side">
+                        <p class="title">lexan 1/3</p>
+                        <p class="des">200 mm • metal</p>
+                    </div>
+                    <div class="right-side">
+                        <p class="weight">630 г</p>
+                    </div>
+            </div>
+            <div class="imagae-block">
+                <div class="image-area">
+                    <img src="/assets/lexans/lexan-1-3-100-m.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </test-card>
+<script>
+
+
+
+
+
+
+// Function to save values to localStorage and update labels
+// Function to save values to localStorage and update labels
+// Function to save values to localStorage and update labels
+// Function to save values to localStorage and update labels
+// Import organization-specific modules, packages, and libraries as needed
+// Example: import OrganizationLocalStorage from 'organization-local-storage';
+
+const saveAndUpdateLabels = () => {
+    const colorInputs = document.querySelectorAll('input[name="color"]');
+    
+    colorInputs.forEach(input => {
+        const labelText = input.getAttribute('label-text') || '';
+        const labelTextActive = input.getAttribute('label-text-active') || '';
+        
+        input.addEventListener('change', function() {
+            const accentColor = this.value;
+
+            localStorage.setItem('label-text', labelText);
+            localStorage.setItem('label-text-active', labelTextActive);
+
+            const labels = document.querySelectorAll('label.dots');
+            labels.forEach(label => {
+                label.style.color = label.htmlFor === this.id ? (this.checked ? labelTextActive : labelText) : label.style.color;
+            });
+
+            if (this.checked) {
+                localStorage.setItem('accent-color', accentColor);
+                document.documentElement.style.setProperty('--accent-color', accentColor);
+            }
+        });
+    });
+
+    // Retrieve and apply accent-color on page load
+    const savedAccentColor = localStorage.getItem('accent-color');
+    if (savedAccentColor) {
+        document.documentElement.style.setProperty('--accent-color', savedAccentColor);
+    }
+
+    // Set checked input with name "color"
+    const checkedColorInput = document.querySelector('input[name="color"]:checked');
+    if (checkedColorInput) {
+        checkedColorInput.checked = false; // Uncheck the currently checked input
+    }
+};
+
+// Call the function to save values to localStorage, update labels, and set checked input
+saveAndUpdateLabels();
+
+
+
+
+
+
+
+
+
+const radios = document.querySelectorAll('input[name="lang"]');
+        const slider = document.getElementById('slider');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                const label = this.nextElementSibling;
+                const labelWidth = label.offsetWidth;
+                const labelLeft = label.offsetLeft;
+                slider.style.width = `${labelWidth}px`;
+                slider.style.transform = `translateX(${labelLeft}px)`;
+
+                // Save state
+                localStorage.setItem('current-lang', this.value);
+            });
+        });
+
+        // Set initial state based on localStorage
+        const selectedLanguage = localStorage.getItem('current-lang');
+        if (selectedLanguage) {
+            const selectedRadio = document.querySelector(`input[value="${selectedLanguage}"]`);
+            if (selectedRadio) {
+                selectedRadio.checked = true;
+                const label = selectedRadio.nextElementSibling;
+                const labelWidth = label.offsetWidth;
+                const labelLeft = label.offsetLeft;
+                slider.style.width = `${labelWidth}px`;
+                slider.style.transform = `translateX(${labelLeft}px)`;
+            }
+        }
+const applyColorScheme = (scheme) => {
+const root = document.documentElement;
+const colorScheme = scheme === 'light' ? 'light' : 'dark';
+
+const colors = {
+    light: {
+        '--background': '#FFFFFF',
+        '--text': '#0A0F1B',
+        '--button-normal': '#F8FAFA',
+        '--button-active': '#E8EBEE',
+        '--description': '#818891',
+        '--black': '#0A0F1B'
+    },
+    dark: {
+        '--background': '#151515',
+        '--text': '#FFFFFF',
+        '--button-normal': '#262626',
+        '--button-active': '#626262',
+        '--description': '#D7D7D7',
+        '--black': '#151515'
+    }
+};
+
+Object.entries(colors[colorScheme]).forEach(([key, value]) => {
+    root.style.setProperty(key, value);
+});
+
+localStorage.setItem('color-scheme', colorScheme);
+const modeText = colorScheme === 'dark' ? 'dark mode' : 'light mode';
+document.getElementById('mode-text').innerText = modeText;
+};
+
+const toggleDarkMode = () => {
+    const currentScheme = localStorage.getItem('color-scheme');
+    const newScheme = currentScheme === 'light' ? 'dark' : 'light';
+    applyColorScheme(newScheme);
+
+    // Save color-scheme value after the page is reloaded
+    localStorage.setItem('color-scheme', newScheme);
+};
+
+// Call toggleDarkMode function to apply and save color scheme even after the page is restarted
+toggleDarkMode();
+document.getElementById('ru').addEventListener('click', function() {
+    switchLanguage('russian');
+});
+document.getElementById('en').addEventListener('click', function() {
+    switchLanguage('english');
+});
+const languages = {
+    english: {
+        title: 'lexan 1/3',
+        description: '200 mm • metal',
+        weight: '630 g',
+        settings: 'Settings'
+    },
+    russian: {
+        title: 'лексан 1/3',
+        description: '200 мм • металл',
+        weight: '630 г',
+        settings: 'Настройки'
+    },
+};
+function switchLanguage(language) {
+    const leftSide = document.querySelector('.left-side');
+    const rightSide = document.querySelector('.right-side');
+    const lang = document.querySelector('.lang');
+
+    lang.textContent = languages[language].settings;
+    leftSide.querySelector('.title').textContent = languages[language].title;
+    leftSide.querySelector('.des').textContent = languages[language].description;
+    rightSide.querySelector('.weight').textContent = languages[language].weight;
+    
+    localStorage.setItem('current-lang', language);
+}
+
+// Function to switch language and set UI to saved language if available
+function switchAndSetSavedLanguage() {
+    const currentLanguage = localStorage.getItem('current-lang');
+    if (currentLanguage) {
+        switchLanguage(currentLanguage);
+        document.querySelector(`input[name="lang"][value="${currentLanguage}"]`).checked = true; // Set the UI to the saved language
+    }
+}
+switchAndSetSavedLanguage();
+
+</script>
+</body>
+</html>

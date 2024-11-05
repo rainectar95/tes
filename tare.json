@@ -1,0 +1,79 @@
+[
+    {
+    "lexans": [
+        {
+            "title": "лексан ",
+            "size": "1/3",
+            "weight": "955 г",
+            "image": "/assets/lexans/lexan-1-3-150-m.webp",
+            "chip": [
+                { "value": "200 мм", "type": "size" }, 
+                { "type": "metal", "value": "металл" }],
+            "chips-scale":[
+                {"value": "150", "title":"крышка"},
+                {"value": "200","title":"дренаж"},
+                {"value": "250","title":"крышка alt"}],
+            "height-block": "Высота лексана",
+            "material-block": "Материал лексана"
+        }
+    ],
+    "cap": [
+        {
+            "title": "бутылка",
+            "size": "",
+            "weight": "55 г",
+            "image": "/assets/cap-red-ranch.png",
+            "chip": [{ "type": "size","value": "ранч"},{ "type": "plastic", "value": "пластик" }],
+            "chipalt": [
+                { "block-spec": { "weight-spec": "150", "title-spec": "Высота лексана" } },
+                { "block-spec": { "weight-spec": "150", "title-spec": "Высота лексана" } }
+            ],
+            "specification": [
+                { "block-spec": { "weight-spec": "100 g", "title-spec": "Spec Title 1" } },
+                { "block-spec": { "title-spec": "лексан ", "weight-spec": "200 g" } },
+                { "block-spec": { "title-spec": "Spec Title 3", "weight-spec": "300 g" } },
+                { "block-spec": { "title-spec": "Spec Title 3", "weight-spec": "300 g" } }
+            ]
+        },
+        {
+            "title": "бутылка",
+            "size": "",
+            "weight": "900 г",
+            "image": "/assets/cap-red-ranch.png",
+            "chip": [{ "type": "size","value": "ранч"},{ "type": "plastic", "value": "пластик" }],
+            "chipalt": [
+                { "block-spec": { "weight-spec": "150", "title-spec": "Высота лексана" } },
+                { "block-spec": { "weight-spec": "150", "title-spec": "Высота лексана" } }
+            ],
+            "specification": [
+                { "block-spec": { "weight-spec": "100 g", "title-spec": "Spec Title 1" } },
+                { "block-spec": { "title-spec": "лексан ", "weight-spec": "200 g" } },
+                { "block-spec": { "title-spec": "Spec Title 3", "weight-spec": "300 g" } },
+                { "block-spec": { "title-spec": "Spec Title 3", "weight-spec": "300 g" } }
+            ]
+        }
+    ],
+
+    "boxes": [
+        {
+            "title": "ящик ",
+            "size": "",
+            "weight": "1 750 г",
+            "image": "assets/lexans/box-blue-1.webp",
+            "chip": [{ "value": "150 мм", "type": "size" }, { "type": "plastic", "value": "пластик" }],
+            "weightcalc": [{ "value": "150", "type": "value" }, { "value": "320", "type": "value" }],
+            "chipalt": [
+                { "block-spec": { "weight-spec": "150", "title-spec": "Высота лексана" } },
+                { "block-spec": { "weight-spec": "150", "title-spec": "Высота лексана" } }
+            ],
+            "specification": [
+                { "block-spec": { "weight-spec": "100 g", "title-spec": "Spec Title 1" } },
+                { "block-spec": { "title-spec": "лексан ", "weight-spec": "200 g" } },
+                { "block-spec": { "title-spec": "Spec Title 3", "weight-spec": "300 g" } },
+                { "block-spec": { "title-spec": "Spec Title 3", "weight-spec": "300 g" } }
+            ]
+        }
+    ]
+
+    }
+]

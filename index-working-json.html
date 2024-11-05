@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>tare</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="l-header">
+                <a type="button" class="click" id="full" value="" onclick="toggleFullScreen()">
+                    <img src="assets/cube.svg" alt="" srcset="">
+                </a>
+                <h2 class="hero-one">лексаны</h2>
+            </div>
+            <div class="r-header">
+                <h2 class="time" id="time">time</h2>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content" id="panel1">
+                <div id="card-template" style="display: none;">
+                    <button class="card">
+                        <div class="l-card">
+                            <div class="size-card">0000</div>
+                            <div class="name-card">
+                                <p class="text-card"></p>
+                                <p class="text-card lexan"></p>
+                            </div>
+                            <div class="chips"></div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="">
+                        </div>
+                    </button>
+                </div>
+                <div id="bottom-sheet-panel1" class="bottom-sheet">
+                    <div id="extra-info"></div>
+                    <div class="line"></div>
+                    <div id="hero" class="hero">
+                        <div class="hero-title">
+                            <div class="size-sheet" id="title"></div>
+                            <div class="size-sheet" id="size"></div>
+                        </div>
+                        <div class="weight-sheets" id="weight"></div>
+                    </div>
+                    <div class="hero-image">
+                        <img id="bottom-sheet-image" src="" alt="">
+                    </div>
+                    <div class="group-sheet" id="chipsalt-spec"></div>
+                    <div id="chips"></div>
+                    <div class="grid-spec" id="grid-spec"></div>
+                </div>
+                <div id="overlay-panel1" class="overlay"></div>
+            </div>
+            <div class="content" id="panel2">
+                <div id="bottom-sheet-panel2" class="bottom-sheet">
+                    <div id="extra-info"></div>
+                    <div class="line"></div>
+                    <div id="hero" class="hero">
+                        <div class="hero-title">
+                            <div class="size-sheet" id="title"></div>
+                            <div class="size-sheet" id="size"></div>
+                        </div>
+                        <div class="weight-sheets" id="weight"></div>
+                    </div>
+                    <div class="hero-image">
+                        <img id="bottom-sheet-image" src="" alt="">
+                    </div>
+                    <div class="group-sheet" id="chipsalt-spec"></div>
+                    <div id="chips"></div>
+                    <div class="grid-spec" id="grid-spec"></div>
+                </div>
+                <div id="overlay-panel2" class="overlay"></div>
+            </div>
+            <div class="content" id="panel3">
+                <div id="bottom-sheet-panel3" class="bottom-sheet">
+                    <div id="extra-info"></div>
+                    <div class="line"></div>
+                    <div id="hero" class="hero">
+                        <div class="hero-title">
+                            <div class="size-sheet" id="title"></div>
+                            <div class="size-sheet" id="size"></div>
+                        </div>
+                        <div class="weight-sheets" id="weight"></div>
+                    </div>
+                    <div class="hero-image">
+                        <img id="bottom-sheet-image" src="" alt="">
+                    </div>
+                    <div class="group-sheet" id="chipsalt-spec"></div>
+                    <div id="chips"></div>
+                    <div class="grid-spec" id="grid-spec"></div>
+                </div>
+                <div id="overlay-panel3" class="overlay"></div>
+            </div>
+            <div class="content" id="panel4"></div>
+            <div class="content" id="panel5">
+                <div class="main-calc">
+                    <div class="hero-calc">
+                        <div class="tabs">
+                            <div class="tab" onclick="showTab(0)">Tab 1</div>
+                            <div class="tab" onclick="showTab(1)">Tab 2</div>
+                            <div class="tab" onclick="showTab(2)">Tab 3</div>
+                        </div>
+                        <div class="tab-content" id="tab-0">
+                            <div class="radio-group">
+                                <label class="card-calc">
+                                    <input id="tareWeight" type="radio" name="radioValue" value="565" onchange="updateSum()">
+                                    <p>Лексан 1/3 150 мм металл</p>
+                                </label>           
+                                <label class="card-calc">
+                                    <input id="tareWeight" type="radio" name="radioValue" value="5645" onchange="updateSum()">
+                                    <p>Лексан 1/3 150 мм металл</p>
+                                </label>
+                                <label class="card-calc">
+                                    <input id="tareWeight" type="radio" name="radioValue" value="55" onchange="updateSum()">
+                                    <p>Лексан 1/3 150 мм металл</p>
+                                </label>
+                                <label class="ccard-calc">
+                                    <input id="tareWeight" type="radio" name="radioValue" value="45" onchange="updateSum()">
+                                    <p>Лексан 1/3 150 мм металл</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab-1">
+                            <div class="radio-group">
+                                <label><input type="radio" name="radioValue" value="20" onclick="updateSum()"> 20</label>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab-2">
+                            <div class="radio-group">
+                                <label><input type="radio" name="radioValue" value="30" onclick="updateSum()"> 30</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator">
+                        <div class="inputs-two">
+                            <div class="l-block-calc">
+                                <div class="l-side-calc" id="result"</div>
+                                <div class="tips">вес с учетом тары</div>
+                            </div>
+                            <div class="r-block-calc">
+                                <input class="r-side-calc" type="text" id="display" disabled>
+                                <div class="tips">общий вес</div>
+                            </div>
+                        </div>
+                        <div class="keyboard">
+                            <button onclick="appendNumber(1)">1</button>
+                            <button onclick="appendNumber(2)">2</button>
+                            <button onclick="appendNumber(3)">3</button>
+                            <button onclick="appendNumber(4)">4</button>
+                            <button onclick="appendNumber(5)">5</button>
+                            <button onclick="appendNumber(6)">6</button>
+                            <button onclick="appendNumber(7)">7</button>
+                            <button onclick="appendNumber(8)">8</button>
+                            <button onclick="appendNumber(9)">9</button>
+                            <button class="clean" onclick="clearDisplay()"><img src="clean.png" width="36px" alt="" srcset=""></button>
+                            <button onclick="appendNumber(0)">0</button>
+                            <button class="delete" onclick="deleteLast()"><img src="delete.png" width="36px" alt="" srcset=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="section">
+                <input class="lexans" type="radio" id="1" name="radio" value="лексаны" checked>
+                <label class="icon" for="1">
+                    <div class="icon-chips">
+                        <img id="icon1" src="assets/lexan-off.svg">
+                    </div>
+                    <div class="text">лексаны</div>
+                </label>
+            </div>
+            <div class="section">
+                <input type="radio" class="cap" id="2" name="radio" value="бутылки">
+                <label class="icon" for="2">
+                    <div class="icon-chips">
+                        <img id="icon2" src="assets/lexan-off.svg">
+                    </div>
+                    <div class="text">бутылки</div>
+                </label>
+            </div>
+            <div class="section">
+                <input type="radio" class="boxes" id="3" name="radio" value="ящики">
+                <label class="icon" for="3">
+                    <div class="icon-chips">
+                        <img id="icon3" src="assets/lexan-off.svg">
+                    </div>
+                    <div class="text">ящики</div>
+                </label>
+            </div>
+            <div class="section">
+                <input type="radio" id="4" name="radio" value="крышки">
+                <label class="icon" for="4">
+                    <div class="icon-chips">
+                        <img id="icon4" src="assets/lexan-off.svg">
+                    </div>
+                    <div class="text">прочее</div>
+                </label>
+            </div>
+            <div class="section">
+                <input type="radio" id="5" name="radio" value="списания">
+                <label class="icon" for="5">
+                    <div class="icon-chips">
+                        <img id="icon5" src="assets/lexan-off.svg">
+                    </div>
+                    <div class="text">списания</div>
+                </label>
+            </div>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/lexanData.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Work with the JSON data here
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('There was a problem with your fetch operation:', error);
+  });
+    
+       
+            function showBottomSheet(data, panelId) {
+        const bottomSheet = document.getElementById(`bottom-sheet-${panelId}`);
+        const overlay = document.getElementById(`overlay-${panelId}`);
+        
+        const extraInfo = bottomSheet.querySelector('#extra-info');
+        const title = bottomSheet.querySelector('#title');
+        const size = bottomSheet.querySelector('#size');
+        const weight = bottomSheet.querySelector('#weight');
+        const image = bottomSheet.querySelector('#bottom-sheet-image');
+        const chips = bottomSheet.querySelector('#chips');
+        const gridSpec = bottomSheet.querySelector('#grid-spec');
+        const chipsaltSpec = bottomSheet.querySelector('#chipsalt-spec');
+
+        extraInfo.textContent = data.extra;
+        title.textContent = data.title;
+        size.textContent = data.size;
+        weight.textContent = data.weight;
+        image.src = data.image;
+        gridSpec.innerHTML = '';
+        if (data.specification) {
+            data.specification.forEach(spec => {
+                const specElement = document.createElement('div');
+                specElement.classList.add('block-spec');
+                const titleSpec = document.createElement('p');
+                titleSpec.classList.add('title-spec');
+                titleSpec.textContent = spec['block-spec']['title-spec'];
+                const weightSpec = document.createElement('div');
+                weightSpec.classList.add('weight-spec');
+                weightSpec.textContent = spec['block-spec']['weight-spec'];
+                specElement.appendChild(weightSpec);
+                specElement.appendChild(titleSpec);
+                gridSpec.appendChild(specElement);
+            });
+        }
+        chipsaltSpec.innerHTML = '';
+        if (data.chipalt) {
+            data.chipalt.forEach(chip => {
+                const chipElement = document.createElement('div');
+                chipElement.classList.add('block-spec', 'alt');
+                const titleSpec = document.createElement('p');
+                titleSpec.classList.add('title-spec');
+                titleSpec.textContent = chip['block-spec']['title-spec'];
+                const weightSpec = document.createElement('div');
+                weightSpec.classList.add('weight-spec', 'alt'); // Add combo class here
+                weightSpec.textContent = chip['block-spec']['weight-spec'];
+                chipElement.appendChild(titleSpec);
+                chipElement.appendChild(weightSpec);
+                chipsaltSpec.appendChild(chipElement);
+            });
+        }
+
+        bottomSheet.classList.add('active');
+    overlay.classList.add('active');
+
+    overlay.addEventListener('click', () => {
+        bottomSheet.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.card') && !event.target.closest('.bottom-sheet')) {
+            bottomSheet.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+    });
+}
+
+    function createCard(data, targetPanelId) {
+        const newCard = cardTemplate.cloneNode(true);
+        const sizeCard = newCard.querySelector('.size-card');
+        sizeCard.textContent = data.weight;
+        const textCard = newCard.querySelector('.name-card .text-card');
+        textCard.textContent = data.title;
+        const lexanText = newCard.querySelector('.name-card .lexan');
+        lexanText.textContent = data.size;
+        const image = newCard.querySelector('.image');
+        image.src = data.image;
+        const chips = newCard.querySelector('.chips');
+        data.chip.forEach(chip => {
+            const chipElement = document.createElement('div');
+            chipElement.textContent = chip.value;
+            chipElement.classList.add('chip'); // Ensure all elements have the 'chip' class
+            chipElement.classList.add(chip.type); // Add class based on type
+            if (chip.type === 'chip') {
+                chipElement.classList.add('combo'); // Add combo class if type is chip
+            }
+            chips.appendChild(chipElement);
+        });
+
+        // Add event listener to show bottom sheet when card is clicked
+        newCard.addEventListener('click', () => {
+            showBottomSheet(data, targetPanelId);
+        });
+
+        document.getElementById(targetPanelId).appendChild(newCard);
+    }
+
+    lexanData.forEach(category => {
+        category.lexans.forEach(data => {
+            createCard(data, 'panel1');
+        });
+        category.cap.forEach(data => {
+            createCard(data, 'panel2');
+        });
+        category.boxes.forEach(data => {
+            createCard(data, 'panel3');
+        });
+        category.cap.forEach(data => {
+            createCard(data, 'panel4');
+        });
+    });
+
+    const tabs = document.querySelectorAll('nav input[type="radio"]');
+    const tabPanels = document.querySelectorAll('.content');
+
+    function showCurrentPanel() {
+        tabPanels.forEach(panel => {
+            panel.style.display = 'none';
+        });
+
+        const checkedRadio = document.querySelector('input[type="radio"]:checked');
+        if (checkedRadio) {
+            const panelId = `panel${checkedRadio.id}`;
+            const currentPanel = document.getElementById(panelId);
+            if (currentPanel) {
+                currentPanel.style.display = 'block';
+            }
+        }
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('change', showCurrentPanel);
+    });
+
+    // Initial call to show the correct panel
+    showCurrentPanel();
+});
+    </script>
+    <script src="/app.js"></script>
+    <script src="/calculator.js"></script>
+</body>
+</html>

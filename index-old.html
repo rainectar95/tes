@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>tare</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+    <body>
+        <!-- <div class="c-block">
+            <div class="c-line"></div>
+        </div> -->
+        <div class="main">
+            <div class="header">
+                <div class="l-header">
+                    <a type="button" class="click" id="full" value="" onclick="toggleFullScreen()">
+                        <img src="assets/cube.svg" alt="" srcset="">
+                    </a>
+                    <h2 class="hero">лексаны</h2>
+                </div>
+                <div class="r-header">
+                    <h2 class="time" id="time">time</h2>
+                </div>
+            </div>
+            <div class="main-content">
+                <!-- ЛЕКСАНЫ -->
+                <div class="content" id="panel1">
+                        <!-- МОДАЛЬНОЕ ОКНО ЛЕКСАН 1/1 МЕТАЛЛ -->
+                    <div class="modal" id="modal-1">
+                        <div class="btn-close">Закрыть</div>
+                        <div class="line"></div>
+                        <div class="hero-sheets">
+                            <div class="lexan-text">
+                                <p class="size-card alt">лексан</p>
+                                <p class="size-card alt size">1/1</p>
+                            </div>
+                            <div class="name-card alt">1 600 г</div>
+                        </div>
+                        <div class="info-sheets">
+                            <div class="features-group">
+                                <div class="features colr h">
+                                    <div class="features-cap">Высота лексана</div>
+                                    <div class="features-size-alt">150 мм</div>
+                                </div>
+                                <div class="features colr h">
+                                    <div class="features-cap">Материал лексана</div>
+                                    <div class="features-size-alt">металл</div>
+                                </div>
+                            </div>
+                            <div class="image-sheets icolr">
+                                <img src="/assets/1-1.png" alt="" class="img">
+                            </div>
+                                <div class="specification">
+                                    <div class="block-spec colr">
+                                        <p class="title-spec">ssssssss</p>
+                                        <p class="weight-spec">11</p>
+                                    </div>
+                                    <div class="block-spec colr">
+                                        <p class="title-spec">ssssssss</p>
+                                        <p class="weight-spec">11</p>
+                                    </div>
+                                    <div class="block-spec colr">
+                                        <p class="title-spec">ssssssss</p>
+                                        <p class="weight-spec">11</p>
+                                    </div>
+                                    <div class="block-spec colr">
+                                        <p class="title-spec">ssssssss</p>
+                                        <p class="weight-spec">11</p>
+                                    </div>
+                                    <div class="block-spec colr">
+                                        <p class="title-spec">ssssssss</p>
+                                        <p class="weight-spec">11</p>
+                                    </div>
+                                    <div class="block-spec colr">
+                                        <p class="title-spec">ssssssss</p>
+                                        <p class="des-spec">11</p>
+                                    </div>
+                                </div>
+                            <!-- <div class="features-group">
+                                <div class="features colr">
+                                    <div class="features-size">2 240 г</div>
+                                    <div class="features-cap">Лексан<wbr> с обычной крышкой</div>
+                                </div>
+                                <div class="features colr">
+                                    <div class="features-size">2 535 г</div>
+                                    <div class="features-cap">Лексан c альтернативной крышкой</div>
+                                </div>
+                                <div class="features colr">
+                                    <div class="features-size">2 535 г</div>
+                                    <div class="features-cap">Лексан c альтернативной крышкой</div>
+                                </div>
+                                <div class="features colr">
+                                    <div class="features-size">2 535 г</div>
+                                    <div class="features-cap">Лексан c альтернативной крышкой</div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- МОДАЛЬНОЕ ОКНО ЛЕКСАН 1/1 ПЛАСТИК -->
+                    <div class="modal" id="modal-2">
+                        <div class="line"></div>
+                        <div class="hero-sheets">
+                            <div class="lexan-text">
+                                <p class="size-card alt">лексан</p>
+                                <p class="size-card alt size">1/1</p>
+                            </div>
+                            <p class="name-card alt">750 г</p>
+                        </div>
+                        <div class="info-sheets">
+                            <div class="image-sheets colr filter">
+                                <img src="/assets/1-1-150-plastic.png" alt="" class="img filter">
+                            </div>
+                            <div class="features-group add">
+                                <div class="features colr">
+                                    <div class="features-size">150 мм</div>
+                                    <div class="features-cap">Высота лексана</div>
+                                </div>
+                                <div class="h-dv"></div>
+                                <div class="features colr">
+                                    <div class="features-size ">пластик</div>
+                                    <div class="features-cap">Материал лексана</div>
+                                </div>
+                            </div>
+                            <div class="features-group">
+                                <div class="features colr">
+                                    <div class="features-size">1 155 г</div>
+                                    <div class="features-cap">Лексан<wbr> с обычной крышкой</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- МОДАЛЬНОЕ ОКНО ЛЕКСАН 1/2 МЕТАЛЛ -->
+                    <div class="modal" id="modal-3">
+                        <div class="line"></div>
+                        <div class="hero-sheets">
+                            <div class="lexan-text">
+                                <p class="size-card alt">лексан</p>
+                                <p class="size-card alt size">1/2</p>
+                            </div>
+                            <p class="name-card alt">935 г</p>
+                        </div>
+                        <div class="info-sheets">
+                            <div class="image-sheets colr filter">
+                                <img src="/assets/1-2.png" alt="" class="img filter">
+                            </div>
+                            <div class="features-group add">
+                                <div class="features colr">
+                                    <div class="features-size">150 мм</div>
+                                    <div class="features-cap">Высота лексана</div>
+                                </div>
+                                <div class="h-dv"></div>
+                                <div class="features colr">
+                                    <div class="features-size ">пластик</div>
+                                    <div class="features-cap">Материал лексана</div>
+                                </div>
+                            </div>
+                            <div class="features-group">
+                                <div class="features colr">
+                                    <div class="features-size">1 160 г</div>
+                                    <div class="features-cap">Лексан<wbr> с обычной крышкой</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- МОДАЛЬНОЕ ОКНО ЛЕКСАН 1/3 МЕТАЛЛ -->
+                    <div class="modal" id="modal-5">
+                        <div class="line"></div>
+                        <div class="hero-sheets">
+                            <div class="lexan-text">
+                                <p class="size-card alt">лексан</p>
+                                <p class="size-card alt size">1/3</p>
+                            </div>
+                            <p class="name-card alt">565 г</p>
+                        </div>
+                        <div class="features-group">
+                            <div class="features colr h">
+                                <div class="features-cap">Высота лексана</div>
+                                <div class="features-size-alt">150 мм</div>
+                            </div>
+                            <div class="h-dv"></div>
+                            <div class="features colr h">
+                                <div class="features-cap">Материал лексана</div>
+                                <div class="features-size-alt">металл</div>
+                            </div>
+                        </div>
+                        <div class="info-sheets">
+                            <div class="image-sheets colr filter">
+                                <img src="/assets/1-3.png" alt="" class="img filter">
+                            </div>
+                            <div class="features-group">
+                                <div class="features colr">
+                                    <div class="features-size">700 г</div>
+                                    <div class="features-cap">Лексан с обычной крышкой</div>
+                                </div>
+                                <div class="h-dv"></div>
+                                <div class="features colr">
+                                    <div class="features-size">680 г</div>
+                                    <div class="features-cap">Лексан<wbr> с дренажом</div>
+                                </div>
+                                <div class="v-dv"></div>
+                                <div class="features colr">
+                                    <div class="features-size">815 г</div>
+                                    <div class="features-cap">Лексан<wbr>с дренажом и обычной крышкой</div>
+                                </div>
+                                <div class="h-dv"></div>
+                                <div class="features colr">
+                                    <div class="features-size">735 г</div>
+                                    <div class="features-cap">Лексан<wbr> с альтернативной крышкой</div>
+                                </div>
+                                <div class="v-dv"></div>
+                                <div class="features colr">
+                                    <div class="features-size">850 г</div>
+                                    <div class="features-cap">Лексан<wbr>с дренажом и альтернативной крышкой</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="hidemodal('modal-1')" class="overlay"></div>
+                    <button class="card" onclick="showmodal('modal-1')">
+                        <div class="l-card">
+                            <div class="size-card">1600 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">1/1</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">150 мм</div>
+                                <div class="chips metal">металл</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="assets/1-1.png" alt="">
+                        </div>
+                    </button>
+                    <div class="divide"></div>
+                    <button class="card" onclick="showmodal('modal-2')">
+                        <div class="l-card">
+                            <div class="size-card">750 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">  1/1</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">150 мм</div>
+                                <div class="chips plastic">пластик</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="/assets/1-1-150-plastic.png" alt="" srcset="">
+                        </div>
+                    </button>
+                    <div class="divide"></div>
+                    <button class="card" onclick="showmodal('modal-3')">
+                        <div class="l-card">
+                            <div class="size-card">955 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">1/2</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">400 мм</div>
+                                <div class="chips metal">металл</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image alt" src="assets/1-2.png">
+                        </div>
+                    </button>
+                    <div class="divide"></div>
+                    <button class="card" onclick="showmodal('modal-4')">
+                        <div class="l-card">
+                            <div class="size-card">955 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">1/2</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">400 мм</div>
+                                <div class="chips metal">металл</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image filter" src="assets/1-2-400-plastic.png" srcset="">
+                        </div>
+                    </button>
+                    <div class="divide"></div>
+                    <button class="card" onclick="showmodal('modal-5')">
+                        <div class="l-card">
+                            <div class="size-card">565 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">1/3</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">150 мм</div>
+                                <div class="chips metal">металл</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="assets/1-3.png" alt="" srcset="">
+                        </div>
+                    </button>
+                    <div class="divide"></div>
+                    <button class="card" onclick="showmodal('modal-6')">
+                        <div class="l-card">
+                            <div class="size-card">565 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">1/3</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">150 мм</div>
+                                <div class="chips metal">металл</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="assets/1-3.png" alt="" srcset="">
+                        </div>
+                    </button>
+                    <div class="divide"></div>
+                    <button class="card" onclick="showmodal('modal-7')">
+                        <div class="l-card">
+                            <div class="size-card">565 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">1/3</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">150 мм</div>
+                                <div class="chips metal">металл</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="assets/1-2.png" alt="" srcset="">
+                        </div>
+                    </button>
+                    <div class="divide"></div>
+                    <button class="card" onclick="showmodal('modal-5')">
+                        <div class="l-card">
+                            <div class="size-card">565 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">1/3</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">150 мм</div>
+                                <div class="chips metal">металл</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="assets/1-2.png" alt="" srcset="">
+                        </div>
+                    </button>
+                    <div class="divide"></div>
+                    <button class="card" onclick="showmodal('modal-5')">
+                        <div class="l-card">
+                            <div class="size-card">565 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">1/3</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">150 мм</div>
+                                <div class="chips metal">металл</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="assets/1-2.png" alt="" srcset="">
+                        </div>
+                    </button>
+                    <div class="divide"></div>
+                    <button class="card" onclick="showmodal('modal-5')">
+                        <div class="l-card">
+                            <div class="size-card">565 г</div>
+                            <div class="name-card">
+                                <p class="text-card">лексан</p>
+                                <p class="text-card lexan">1/3</p>
+                            </div>
+                            <div class="spec">
+                                <div class="chips">150 мм</div>
+                                <div class="chips metal">металл</div>
+                            </div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="assets/1-2.png" alt="" srcset="">
+                        </div>
+                    </button>
+                </div>
+                <!-- БУТЫЛКИ -->
+                <div class="content" id="panel2">
+                    <button class="card" id="lexan">
+                        <div class="l-card">
+                            <div class="chips">1000 мм</div>
+                            <div class="text-card">лексан 1/3</div>
+                            <div class="size-card">245 г</div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="assets/1-2.png" alt="s" width="100px" height="90px">
+                        </div>
+                </div>
+                <!-- ДРЕНАЖИ -->
+                <div class="content" id="panel3">
+                    <button class="card" id="lexan">
+                        <div class="l-card">
+                            <div class="chips">10s00 мм</div>
+                            <div class="name-card">лексан 1/3</div>
+                            <div class="size-card">245 г</div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="assets/1-2.png" alt="s" width="100px" height="90px">
+                        </div>
+                </div>
+            </div>
+             <nav class="navigation"> 
+                <div class="section">
+                    <input type="radio" id="1" name="radio" value="лексаны" checked>
+                    <label class="icon" for="1">
+                        <div class="icon-chips">
+                        <img src="assets/cube-fill.svg">
+                        </div>
+                        <div class="text">лексаны</div>
+                </div>
+                <div class="section">
+                <input type="radio" id="2" name="radio" value="бутылки">
+                <label class="icon" for="2">
+                    <div class="icon-chips">
+                        <img src="assets/cube-fill.svg">
+                        </div>
+                    <div class="text">бутылки</div>
+        </div>
+        <div class="section">
+            <input type="radio" id="3" name="radio" value="дренажи">
+            <label class="icon" for="3">
+                <div class="icon-chips">
+                    <img src="assets/cube-fill.svg">
+                </div>
+                <div class="text">дренажи</div>
+            </label>
+        </div>
+        <div class="section">
+            <input type="radio" id="4" name="radio" value="ящики">
+            <label class="icon" for="4">
+                <div class="icon-chips">
+                    <img src="assets/cube-fill.svg">
+                </div>
+                <div class="text">ящики</div>
+            </label>
+        </div>
+        <div class="section">
+            <input type="radio" id="5" name="radio" value="крышки">
+            <label class="icon" for="5">
+                <div class="icon-chips">
+                    <img src="assets/cube-fill.svg">
+                </div>
+                <div class="text">крышки</div>
+            </label>
+        </div>
+        <div class="section">
+            <input type="radio" id="6" name="radio" value="прочее">
+            <label class="icon" for="6">
+                <div class="icon-chips">
+                    <img src="assets/cube-fill.svg">
+                </div>
+                <div class="text">прочее</div>
+            </label>
+        </div>
+            </nav>
+        </div>
+        <script src="button-sheets.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

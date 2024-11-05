@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "workbox-precaching": "^7.1.0"
+  },
+  "devDependencies": {
+    "workbox-webpack-plugin": "^7.1.0"
+  }
+}

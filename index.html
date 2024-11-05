@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon.png">
+    <meta name="msapplication-TileColor" content="#E3EAEF">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Easy Express">
+    <meta name="apple-mobile-web-app-title" content="Easy Express">
+    <meta name="theme-color" content="#E3EAEF">
+    <meta name="msapplication-navbutton-color" content="#E3EAEF">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Web site created using create-react-app">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Tare">
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon.png">
+    <meta name="theme-color" content="#E3EAEF">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="/manifest.json">
+    <link src="https://lottie.host/23e779a3-8a0e-44fb-9991-c341bf60f915/LkQUWhRawm.json">
+    <title>tare</title>
+<script>navigator.serviceWorker.register("pwabuilder-adv-sw.js")</script> 
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="main">
+            <!-- HEADER -->
+            <div class="header">
+                <!--Header with icon -->
+                <div class="text-icon">
+                    <img class="hero-icon" src="/assets/lexan-off.png"  width="20%" alt="Hero Icon">
+                    <h2 class="hero-one">лексаны</h2>
+                </div>
+                <!-- Time and full screen -->
+                <div class="time-block" onclick="toggleFullScreen()">
+                    <h2 class="time" id="time">time</h2>
+                </div>
+            </div>
+            <!-- CONTENT -->
+            <div class="main-content">
+            <!-- Lexans -->
+            <div class="content" id="panel1">
+                <div id="card-template" style="display: none;">
+                    <button class="card">
+                        <div class="l-card">
+                            <div class="size-card">0000</div>
+                            <div class="name-card">
+                                <p class="text-card"></p>
+                                <p class="text-card lexan"></p>
+                            </div>
+                            <div class="chips"></div>
+                        </div>
+                        <div class="r-card">
+                            <img class="image" src="">
+                        </div>
+                    </button>
+                </div>
+                <div id="bottom-sheet-panel1" class="bottom-sheet">
+                    <div id="extra-info"></div>
+                    <div  class="line">
+                        <img src="assets/close.svg" width="16" alt="">
+                    </div>
+                    <div id="hero" class="hero">
+                        <div class="hero-title">
+                            <div class="size-sheet" id="title"></div>
+                            <div class="size-sheet" id="size"></div>
+                        </div>
+                        <div class="weight-sheets" id="weight"></div>
+                    </div>
+                    <div class="hero-image">
+                        <img id="bottom-sheet-image" src="" alt="">
+                    </div>
+                    <div class="group-sheet" id="chipsalt-spec"></div>
+                    <div id="chips"></div>
+                    <div class="grid-spec" id="grid-spec"></div>
+                </div>
+                <div id="overlay-panel1" class="overlay"></div>
+            </div>
+            <!-- Caps -->
+            <div class="content" id="panel2">
+                    <div id="bottom-sheet-panel2" class="bottom-sheet">
+                        <div id="extra-info"></div>
+                        <div class="line"></div>
+                        <div id="hero" class="hero">
+                            <div class="hero-title">
+                                <div class="size-sheet" id="title"></div>
+                                <div class="size-sheet" id="size"></div>
+                            </div>
+                            <div class="weight-sheets" id="weight"></div>
+                        </div>
+                        <div class="hero-image">
+                            <img id="bottom-sheet-image" src="" alt="">
+                        </div>
+                        <div class="group-sheet" id="chipsalt-spec"></div>
+                        <div id="chips"></div>
+                        <div class="grid-spec" id="grid-spec"></div>
+                </div>
+                <div id="overlay-panel2" class="overlay"></div>
+            </div>
+            <!-- Boxes -->
+            <div class="content" id="panel3">
+                <div id="bottom-sheet-panel3" class="bottom-sheet">
+                    <div id="extra-info"></div>
+                    <div class="line"></div>
+                    <div id="hero" class="hero">
+                        <div class="hero-title">
+                            <div class="size-sheet" id="title"></div>
+                            <div class="size-sheet" id="size"></div>
+                        </div>
+                        <div class="weight-sheets" id="weight"></div>
+                    </div>
+                    <div class="hero-image">
+                        <img id="bottom-sheet-image" src="" alt="">
+                    </div>
+                    <div class="group-sheet" id="chipsalt-spec"></div>
+                    <div id="chips"></div>
+                    <div class="grid-spec" id="grid-spec"></div>
+                </div>
+                <div id="overlay-panel3" class="overlay"></div>
+            </div>
+            <!-- Trays -->
+            <div class="content" id="panel4">
+                <div id="bottom-sheet-panel4" class="bottom-sheet">
+                    <div id="extra-info"></div>
+                    <div class="line"></div>
+                    <div id="hero" class="hero">
+                        <div class="hero-title">
+                            <div class="size-sheet" id="title"></div>
+                            <div class="size-sheet" id="size"></div>
+                        </div>
+                        <div class="weight-sheets" id="weight"></div>
+                    </div>
+                    <div class="hero-image">
+                        <img id="bottom-sheet-image" src="" alt="">
+                    </div>
+                    <div class="group-sheet" id="chipsalt-spec"></div>
+                    <div id="chips"></div>
+                    <div class="grid-spec" id="grid-spec"></div>
+                </div>
+                <div id="overlay-panel4" class="overlay"></div>
+            </div>
+            <!-- Calculator -->
+            <div class="content" id="panel5">
+                    <!-- Switch tabs and show active card -->
+                     <div class="button-block">
+                        <div class="calc-buttons">
+                            <label id="cardLabel" for="tabCheckbox">
+                                <input type="checkbox" id="tabCheckbox" name="tab">
+                                <div class="image-fit">
+                                    <img for="tabCheckbox" src="icons/icon-scale.svg" width="24" id="cardImage">
+                                </div>
+                                <span class="cardLabel2">выберите тару</span>
+                            </label>
+                        </div>
+                     </div>
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <div id="tab1" class="tab active">     
+                            <div class="header-input">
+                                <div class="inputs-two">
+                                    <div class="l-side-calc">
+                                        <p class="result" id="result"></p>
+                                    </div>
+                                    <input  class="r-side-calc" maxlength="2" max="2" type="text" placeholder="0" id="display" disabled="">                                
+                                </div>
+                                <div class="tips-block">
+                                    <div class="tips">итоговый вес</div>
+                                    <div class="tips">общий вес</div>
+                                </div> 
+                                <div class="second-weight" id="dimension-container"></div>
+                            </div>
+                            <div class="keyboard">
+                                <button onclick="appendNumber(1)">1</button>
+                                <button onclick="appendNumber(2)">2</button>
+                                <button onclick="appendNumber(3)">3</button>
+                                <button onclick="appendNumber(4)">4</button>
+                                <button onclick="appendNumber(5)">5</button>
+                                <button onclick="appendNumber(6)">6</button>
+                                <button onclick="appendNumber(7)">7</button>
+                                <button onclick="appendNumber(8)">8</button>
+                                <button onclick="appendNumber(9)">9</button>
+                                <button class="clean" onclick="clearDisplay()"><img src="./assets/icon/delete.svg" width="36" height="36" alt="" srcset=""></button>
+                                <button onclick="appendNumber(0)">0</button>
+                                <button class="delete" onclick="deleteLast()"><img src="./assets/icon/remove.svg" width="36" height="36" alt="" srcset=""></button>
+                            </div>                  
+                        </div>
+                        <div id="tab2" class="tab">
+                            <div class="nav-container">
+                                <div class="nav-filter">
+                                    <div class="section-filter">
+                                        <input class="calc-chips" type="radio" id="f1" name="filter" value="filter1" checked>
+                                        <label class="chip-filter"  for="f1">крышкаыы
+                                        </label>
+                                    </div>
+                                    <div class="section-filter">
+                                        <input class="calc-chips" type="radio" id="f2" name="filter" value="filter2">
+                                        <label class="chip-filter"  for="f2">бутылки                                     </label>
+                                    </div>
+                                    <div class="section-filter">
+                                        <input class="calc-chips" type="radio" id="f3" name="filter" value="filter3">
+                                        <label class="chip-filter"  for="f3">Ящики                                    </label>
+                                    </div>
+                                    <div class="section-filter">
+                                        <input class="calc-chips" type="radio" id="f4" name="filter" value="filter4">
+                                        <label class="chip-filter"  for="f4">Лотки                                    </label>
+                                    </div>
+                                    <div class="section-filter">
+                                        <input class="calc-chips" type="radio" id="f5" name="filter" value="filter5">
+                                        <label class="chip-filter"  for="f5">Остальное                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="filter-area"> 
+                                    <div class="filter-content" id="filter1">
+                                    </div>
+                                    <div class="filter-content" id="filter2">
+                                    </div>
+                                    <div class="filter-content" id="filter3">
+                                    </div>
+                                    <div class="filter-content" id="filter4">
+                                    </div>
+                                    <div class="filter-content" id="filter5">
+                                    </div>
+                                    </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <!-- NAVIGATION -->
+            <nav class="navigation">
+            <div class="section">
+                <input class="lexans" type="radio" id="1" name="radio" value="лексаны" checked>
+                <label class="icon"  data-tooltip="лексаны" for="1">
+                    <div class="icon-chips" >
+                        <img id="icon1"  src="icons/lexans.svg">
+                    </div>
+                    <p class="icon-lable">лексаны</p>
+                </label>
+            </div>
+            <div class="section">
+                <input type="radio" class="cap" id="2" name="radio" value="бутылки">
+                <label class="icon"  data-tooltip="бутылки" for="2">
+                    <div class="icon-chips">
+                        <img id="icon2" src="icons/caps.svg">
+                    </div>
+                    <p class="icon-lable">бутылки</p>
+                </label>
+            </div>
+            <div class="section">
+                <input type="radio" class="boxes" id="3" name="radio" value="ящики">
+                <label class="icon" for="3">
+                    <div class="icon-chips">
+                        <img id="icon3" src="icons/boxing.svg">
+                    </div>
+                    <p class="icon-lable">ящики</p>
+                </label>
+            </div>
+            <div class="section">
+                <input type="radio" id="4" name="radio" value="лотки">
+                <label class="icon" for="4">
+                    <div class="icon-chips">
+                        <img id="icon4" src="icons/trays.svg">
+                    </div>
+                    <p class="icon-lable">лотки</p>
+                </label>
+            </div>
+            <div class="section">
+                <input type="radio" id="5" name="radio" value="списания">
+                <label class="icon" for="5">
+                    <div class="icon-chips">
+                        <img id="icon5" src="icons/scaling.svg">
+                    </div>
+                    <p class="icon-lable">списания</p>
+                </label>
+            </div>
+            </nav>
+        </div>
+        <!-- <div id='preloader'>
+            <div class="image-block-loader">
+                <img src="loader.gif" alt="">
+            </div>
+            <!-- <div class="text-block-loader">
+                <p class="loading-text">developed and designed by <br></p>
+                <p class="loading-text dev">Kamo Poghosyan</p>
+            </div> -->
+        </div> -->
+        <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/js/servise-worker.js')
+            .then((registration) => {
+            console.log('Service Worker registered:', registration);
+            })
+            .catch((error) => {
+            console.error('Service Worker registration failed:', error);
+            });
+        });
+    }
+        </script> 
+        <script src="./data.js"></script>
+        <script src="./app.js"></script>
+        <script src="./calculator.js"></script>
+        <script src="./calculator-value.js"></script>
+    </body>
+</html>

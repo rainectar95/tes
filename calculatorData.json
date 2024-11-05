@@ -1,0 +1,100 @@
+[
+        {
+           "lexans": [{
+               "title": "лексан",
+               "sizecard": "1/1",
+               "image": "/assets/calc/lexan-1-1-50-m.png",
+               "value": "200",
+               "info": {
+                   "height": "50 мм",
+                   "materials": "металл"
+               }
+           },
+           {
+               "title": "лексан",
+               "sizecard": "1/1",
+               "image": "/assets/calc/lexan-1-1-100-m.png",
+               "value": "300",
+               "info": {
+                   "height": "100 мм",
+                   "materials": "металл"
+               }
+           },
+           {
+               "title": "лексан",
+               "sizecard": "1/1",
+               "image": "/assets/calc/lexan-1-1-150-m.png",
+               "value": "400",
+               "info": {
+                   "height": "150 мм",
+                   "materials": "металл"
+               }
+               
+           }],
+           "cap": [{
+               "title": "бутылка",
+               "sizecard": "1/1",
+               "image": "/assets/calc/cap-1-1-50-m.png",
+               "value": "50",
+               "info": {
+                   "height": "50 мм",
+                   "materials": "металл"
+               }
+           },
+           {
+               "title": "бутылка",
+               "sizecard": "1/1",
+               "image": "/assets/calc/cap-1-1-100-m.png",
+               "value": "100",
+               "info": {
+                   "height": "100 мм",
+                   "materials": "металл"
+               }
+           }],
+           "boxes": [{
+               "title": "ящик",
+               "sizecard": "1/1",
+               "image": "/assets/calc/box-1-1-100-m.png",
+               "value": "100",
+               "info": {
+                   "height": "100 мм",
+                   "materials": "металл"
+               }
+           }],
+           "other": [{
+               "title": "лоток",
+               "sizecard": "1/1",
+               "image": "/assets/calc/box-1-1-100-m.png",
+               "value": "100",
+               "info": {
+                   "height": "100 мм",
+                   "materials": "металл"
+               }
+           }],
+           "chips": [{
+                   "value": "50",
+                   "title": "крышка",
+                   "size": "1/1"
+
+               },
+               {
+                   "value": "100",
+                   "title": "крышка",
+                   "size": "1/1"
+               },
+               {
+                   "value": "150",
+                   "title": "крышка",
+                   "size": "1/1"
+               },
+               {
+                   "value": "200",
+                   "title": "крышка",
+                   "size": "1/1"
+               }
+
+           ]
+        }
+
+    ]
+    
